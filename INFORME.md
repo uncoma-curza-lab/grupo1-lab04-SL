@@ -1,6 +1,13 @@
 # Informe de Laboratorio: IA Soberana y Vibe Coding
 
+## Introducción
+El presente informe documenta la ejecución del Laboratorio 4, cuyo objetivo central fue aplicar los principios de Soberanía Tecnológica mediante la implementación de una infraestructura de Inteligencia Artificial 100% local. El desafío consistió en procesar un archivo de texto (la Licencia GNU GPLv3) utilizando un Modelo de Lenguaje Grande (LLM) de código abierto, para luego, mediante técnicas de Vibe Coding (programación asistida por IA), generar un script en Python capaz de automatizar la extracción de un resumen estricto de tres líneas.
+
+Para lograrlo, el equipo dividió las tareas en dos fases interconectadas: primero, el despliegue del entorno y los servicios y, segundo, el desarrollo de la lógica del cliente mediante inteligencia artificial.
+
 ## 1. Arquitectura y Despliegue
+
+Para garantizar la privacidad de los datos y evitar el uso de servicios privativos, el primer paso fundamental fue establecer el entorno de ejecución local. Esta fase requirió seleccionar un modelo adecuado para los recursos físicos disponibles y aprovisionar el servicio mediante la contenedorización de la API.
 
 ### Modelo Elegido
 `qwen2.5:0.5b`
@@ -37,6 +44,8 @@ Ollama is running
 ---
 
 ## 2. Bitácora de Vibe Coding
+
+Con la infraestructura local desplegada y el servidor de Ollama a la escucha, la segunda fase se centró en el desarrollo del cliente. Utilizando asistencia de IA, se llevó a cabo la creación de un script de Python encargado de leer el archivo, comunicarse con la API recién levantada y ajustar la respuesta del modelo para cumplir con los requisitos estrictos de formato.
 
 ### Contexto Inicial del Entorno de Trabajo
 
@@ -144,4 +153,4 @@ A continuación, se adjunta la captura de pantalla del texto final impreso por l
 
 ## 3. Conclusión Final
 
-Procesar la información de manera local mediante el despliegue de un LLM propio garantiza una mayor soberanía tecnológica, resguardando la privacidad y confidencialidad de los datos sensibles al evitar que archivos, registros (logs) o código propietario sean enviados a infraestructuras en la nube de terceros; sin embargo, la principal desventaja de este enfoque radica en las limitaciones del hardware doméstico o educativo, lo que obliga a utilizar modelos de lenguaje ultraligeros cuya capacidad de razonamiento, precisión y manejo de contexto suele ser inferior en comparación con servicios comerciales de gran escala. En consecuencia, se establece un equilibrio entre autonomía tecnológica, privacidad y capacidad técnica, donde se sacrifica parte del rendimiento a cambio de un mayor control sobre la información procesada.
+El uso exclusivo de herramientas de código abierto, como Podman y Ollama, demostró que es posible construir soluciones tecnológicas sin depender de proveedores externos. En este sentido, procesar la información de manera local mediante el despliegue de un LLM propio garantiza una mayor soberanía tecnológica, resguardando la privacidad y confidencialidad de los datos sensibles al evitar que archivos, registros (logs) o código propietario sean enviados a infraestructuras en la nube de terceros; sin embargo, la principal desventaja de este enfoque radica en las limitaciones del hardware doméstico o educativo, lo que obliga a utilizar modelos de lenguaje ultraligeros cuya capacidad de razonamiento, precisión y manejo de contexto suele ser inferior en comparación con servicios comerciales de gran escala. De esta manera, se establece un equilibrio entre autonomía tecnológica, privacidad y capacidad técnica, donde se sacrifica parte del rendimiento a cambio de un mayor control sobre la información procesada.
